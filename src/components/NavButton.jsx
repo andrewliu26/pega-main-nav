@@ -1,8 +1,16 @@
-function NavButton({ icon: Icon = null, label, onClick }) {
+function NavButton({ icon: Icon = null, label, showLabel }) {
 	return (
-		<div className="nav-button" onClick={onClick}>
-			{ Icon && <Icon className="icon" />}
-			<p className="button-text">{label}</p>
+		<div className="nav-button">
+			{Icon && <Icon className="icon" />}
+			<div
+				style={{
+					width: showLabel ? "200px" : "0px",
+					transition: "width 0.2s ease-in-out",
+					overflow: "hidden",
+				}}
+			>
+				<p className="button-text">{label}</p>
+			</div>
 		</div>
 	);
 }
