@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 function NavButton({ icon: Icon, label, showLabel, destination }) {
 	return (
 		// React Router Link component for client-side navigation
-		<Link className="nav-button" to={destination}>
+		<Link className="nav-button" to={destination ? destination : "/pega-main-nav"}>
 			{/* Optional icon */}
 			{Icon && <Icon className="icon" />}
 

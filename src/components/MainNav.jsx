@@ -75,8 +75,8 @@ function MainNav() {
 					<NavButton icon={PiStarFourFill} label="Dashboard" showLabel={expanded}/>
 					<NavButton icon={IoGrid} label="Spaces" showLabel={expanded}/>
 					<NavButton icon={IoDocument} label="Documents" showLabel={expanded}/>
-					<NavButton icon={IoBug} label="Bugs" showLabel={expanded} destination="/bugs"/>
-					<NavButton icon={FaListUl} label="Epics" showLabel={expanded} destination="/epics"/>
+					<NavButton icon={IoBug} label="Bugs" showLabel={expanded} destination="/pega-main-nav/bugs"/>
+					<NavButton icon={FaListUl} label="Epics" showLabel={expanded} destination="/pega-main-nav/epics"/>
 					<NavButton icon={FaFlag} label="Goals" showLabel={expanded}/>
 				</div>
 

@@ -9,9 +9,9 @@ import EpicsPage from './pages/EpicsPage.jsx';
 const router = createBrowserRouter([
 	{ element: <RootLayout/>,
 	children: [
-		{ path: '/', element: <HomePage/> },
-		{ path: '/bugs', element: <BugsPage/> },
-		{ path: '/epics', element: <EpicsPage/> },
+		{ path: '/pega-main-nav', element: <HomePage/> },
+		{ path: '/pega-main-nav/bugs', element: <BugsPage/> },
+		{ path: '/pega-main-nav/epics', element: <EpicsPage/> },
 	]}
 ]);
 

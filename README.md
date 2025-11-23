@@ -52,5 +52,5 @@ npm run dev
 Once the server is running, visit:
 
 ```
-http://localhost:5173/
+http://localhost:5173/pega-main-nav
 ```
