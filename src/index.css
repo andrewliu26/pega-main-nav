@@ -27,6 +27,8 @@
     padding: 8px 0 8px 24px;
     height: 32px;
     transition: background-color 100ms ease-in-out;
+    text-decoration: none;
+    color: white;
     cursor: pointer;
 }
 

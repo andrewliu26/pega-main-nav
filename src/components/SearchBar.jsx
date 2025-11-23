@@ -4,6 +4,8 @@ function SearchBar({value, onChange, showLabel}) {
 	return (
 		<div className="text-field">
 			<FiSearch/>
+
+			{/* Input label renders conditionally */}
 			<div
 				style={{
 					width: showLabel ? "200px" : "0px",

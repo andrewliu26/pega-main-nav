@@ -9,6 +9,7 @@ import { PiStarFourFill} from "react-icons/pi";
 import { TbPlus, TbGridDots } from "react-icons/tb";
 
 function MainNav() {
+	// State hooks for hover and dropdown interactions
 	const [expanded, setExpanded] = useState(false);
 	const [groupOpen, setGroupOpen] = useState(false);
 
@@ -19,6 +20,7 @@ function MainNav() {
 			onMouseLeave={() => setExpanded(false)}
 			style={{ width: expanded ? "300px" : "70px" }}
 		>
+			{/* Space sections apart */}
 			<div
 				style={{
 					display: "flex",
@@ -27,8 +29,10 @@ function MainNav() {
 					height: "100%",
 				}}
 			>
+				{/* Primary links section */}
 				<div>
 					<div>
+						{/* Branding section */}
 						<div
 							style={{
 								display: "flex",
@@ -39,7 +43,7 @@ function MainNav() {
 							<img
 								src="/pega-logo.png"
 								alt="logo"
-								width="40px"
+								width={"40px"}
 								style={{ margin: "16px" }}
 							/>
 							{expanded && <p style={{ fontSize: '14px' }}>Demo</p>}
@@ -48,6 +52,7 @@ function MainNav() {
 						<SearchBar showLabel={expanded}/>
 					</div>
 
+					{/* Expandable 'Create' menu */}
 					<NavButton
 						icon={TbPlus}
 						label="Create"
@@ -55,6 +60,7 @@ function MainNav() {
 						onClick={() => setGroupOpen(!groupOpen)}
 					/>
 
+					{/* TODO: implement dropdown interaction
 					{groupOpen && (
 						<div>
 							<NavButton icon={null} label="Bug" />
@@ -62,23 +68,25 @@ function MainNav() {
 							<NavButton icon={null} label="Goal" />
 						</div>
 					)}
+					*/}
 
+					{/* Application links */}
 					<NavButton icon={IoHome} label="Home" showLabel={expanded}/>
 					<NavButton icon={PiStarFourFill} label="Dashboard" showLabel={expanded}/>
 					<NavButton icon={IoGrid} label="Spaces" showLabel={expanded}/>
 					<NavButton icon={IoDocument} label="Documents" showLabel={expanded}/>
-					<NavButton icon={IoBug} label="Bugs" showLabel={expanded}/>
-					<NavButton icon={FaListUl} label="Epics" showLabel={expanded}/>
+					<NavButton icon={IoBug} label="Bugs" showLabel={expanded} destination="/bugs"/>
+					<NavButton icon={FaListUl} label="Epics" showLabel={expanded} destination="/epics"/>
 					<NavButton icon={FaFlag} label="Goals" showLabel={expanded}/>
 				</div>
 
+				{/* App utilities section */}
 				<div>
 					<NavButton icon={FaBell} label="Notifications" showLabel={expanded}/>
 					<NavButton icon={FaHistory} label="Recents" showLabel={expanded}/>
 					<NavButton icon={TbGridDots} label="My Applications" showLabel={expanded}/>
 				</div>
 			</div>
-
 		</div>
 	);
 }

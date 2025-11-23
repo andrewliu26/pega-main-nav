@@ -3,15 +3,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./RootLayout";
 
 import HomePage from './pages/HomePage';
-import BugPage from './pages/BugPage.jsx';
-import EpicPage from './pages/EpicPage.jsx';
+import BugsPage from './pages/BugsPage.jsx';
+import EpicsPage from './pages/EpicsPage.jsx';
 
 const router = createBrowserRouter([
 	{ element: <RootLayout/>,
 	children: [
 		{ path: '/', element: <HomePage/> },
-		{ path: '/bug', element: <BugPage/> },
-		{ path: '/epic', element: <EpicPage/> },
+		{ path: '/bugs', element: <BugsPage/> },
+		{ path: '/epics', element: <EpicsPage/> },
 	]}
 ]);
 
