@@ -3,6 +3,7 @@ import { useState } from "react";
 import NavButton from "./NavButton.jsx";
 import SearchBar from "./SearchBar.jsx";
 
+import logo from "/pega-logo.png";
 import { IoHome, IoGrid, IoBug, IoDocument } from "react-icons/io5";
 import { FaBell, FaHistory, FaFlag, FaListUl } from "react-icons/fa";
 import { PiStarFourFill} from "react-icons/pi";
@@ -40,12 +41,7 @@ function MainNav() {
 								alignItems: "center",
 							}}
 						>
-							<img
-								src="/pega-logo.png"
-								alt="logo"
-								width={"40px"}
-								style={{ margin: "16px" }}
-							/>
+							<img src={logo} alt="logo" width={"40px"} style={{ margin: "16px" }}/>
 							{expanded && <p style={{ fontSize: '14px' }}>Demo</p>}
 						</div>
 
